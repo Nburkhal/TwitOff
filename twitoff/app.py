@@ -22,8 +22,6 @@ def create_app():
     @app.route("/")
     def root():
         users = User.query.all()
-        if not users:
-            DB.create_all()
         return render_template('base.html', title='Home', users=users)
 
     @app.route('/reset')
