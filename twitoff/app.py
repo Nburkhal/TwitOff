@@ -15,8 +15,6 @@ def create_app():
     # Stop tracking modifications
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    app.config['ENV'] = config('ENV')
-
     # Now the database knows about the app
     DB.init_app(app)
 
